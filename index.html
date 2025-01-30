@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensinando Vue</title>
+    <link rel="stylesheet" href="modoClaro.css" id="modoAtual">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- Carregue o Vue primeiro -->
+</head>
+<body>
+    <div id="app">
+        <button id="botaoTema" @click="mudarModo">
+            <div id="fundo">
+                <i class="bi bi-moon-fill" v-if="eModoEscuro"></i>
+                <i class="bi bi-sun-fill bg-light" v-else></i>
+            </div>
+        </button>
+    </div>
+    <script src="app.js" defer></script> <!-- Agora seu script -->
+</body>
+</html>
