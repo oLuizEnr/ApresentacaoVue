@@ -1,43 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pesquisa Exata com Vue.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">
-        <div class="barra">
-            <input type="text" v-model="mensagem" placeholder="Digite para pesquisar">
-            <h1>Você pesquisou: {{mensagem}}</h1>
-        </div>
-        <div class="lista">
-            <h1>Minha Lista:</h1>
-            <ul>
-                <li v-for="(item, index) in itensFiltrados" :key="index">{{ item }}</li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        const app = Vue.createApp({
-            data() {
-                return {
-                    mensagem: "",
-                    itens: ["Item 1", "Item 2", "Item 3", "Teste", "Outro Item", "a", "b", "c", "d", "e", "f", "gustavo"]
-                };
-            },
-            computed: {
-                itensFiltrados() {
-                    return this.itens.filter(item => 
-                        item.toLowerCase().includes(this.mensagem.toLowerCase())
-                    );
-                }
-            }
-        });
-
-        app.mount('#app');
-    </script>
+    <h1>Usando o Vue</h1>
+    <a href="alterarTema/alterarTema.html">Alterando o tema</a>
+    <a href="usandoRouter/usandoRouter.html">Vizualizando o Vue Router</a>
+    <a href="barraDePesquisa/barraDePesquisa.html">Usando a barra de pesquisa</a>
 </body>
 </html>
