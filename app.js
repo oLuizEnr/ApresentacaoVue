@@ -13,12 +13,12 @@ createApp({
   methods: {
     mudarModo() {
       this.eModoEscuro = !this.eModoEscuro;
-
-      const modoAtual = document.getElementById("modoAtual");
-      modoAtual.href = this.eModoEscuro ? "modoEscuro.css" : "modoClaro.css";
     }
   },
   computed: {
+    temaAtual() {
+      return this.eModoEscuro ? "modoEscuro.css" : "modoClaro.css"
+    },
     itensFiltrados() {
       return this.itens.filter(
         item => item.toLowerCase().includes(this.mensagem.toLowerCase())
